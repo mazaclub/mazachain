@@ -5,7 +5,7 @@ angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
       templateUrl: '/views/block.html',
-      title: 'Bitcoin Block '
+      title: 'Mazacoin Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -13,7 +13,7 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
       templateUrl: '/views/transaction.html',
-      title: 'Bitcoin Transaction '
+      title: 'Mazacoin Transaction '
     }).
     when('/', {
       templateUrl: '/views/index.html',
@@ -21,15 +21,15 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/blocks', {
       templateUrl: '/views/block_list.html',
-      title: 'Bitcoin Blocks solved Today'
+      title: 'Mazacoin Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
       templateUrl: '/views/block_list.html',
-      title: 'Bitcoin Blocks solved '
+      title: 'Mazacoin Blocks solved '
     }).
     when('/address/:addrStr', {
       templateUrl: '/views/address.html',
-      title: 'Bitcoin Address '
+      title: 'Mazacoin Address '
     }).
     when('/status', {
       templateUrl: '/views/status.html',
