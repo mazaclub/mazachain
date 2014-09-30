@@ -7,14 +7,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="insight navbar-brand" href="/">insight</a>
+      <a class="insight navbar-brand" href="/">mazachain</a>
     </div>
     <div class="navbar-collapse collapse" collapse="$root.isCollapsed">
       <ul class="nav navbar-nav">
+        <!--
         <li data-ng-repeat="item in menu" ui-route="/{{item.link}}" data-ng-class="{active: $uiRoute}">
           <a href="/{{item.link}}">{{item.title}}</a>
         </li>
+        -->
+        <li><a href="/blocks">Blocks</a></li>
+        <li class="dropdown ng-scope">
+          <a class="dropdown-toggle ng-binding ng-scope" data-toggle="dropdown" href="#">Links <span class="caret"></span></a>
+          <ul class="dropdown-menu ng-scope">
+            <li><a href="https://maza.club/p2pool">MazaClub P2pool</a></li>
+            <li><a href="https://maza.club/PPS">MazaClub PPS</a></li>
+            <li><a href="https://prospectors.shastafareye.net">ShastaFarEye Prospectors</a></li>
+            <li class="divider"></li>
+            <li><a href="http://mazacoin.org">Mazacoin.org</a></li>
+            <li><a href="http://mazatalk.com">MazaTalk Forum</a></li>
+          </ul>
+        </li>
       </ul>
+
       <form id="search-form" data-ng-controller="SearchController" class="navbar-form navbar-left hidden-xs" role="search" data-ng-submit="search()">
         <div class="form-group" data-ng-class="{'has-error': badQuery}">
           <input id="search" type="text" class="form-control" data-ng-model="q" data-ng-class="{'loading': loading}"  placeholder="Search for block, transaction or address" data-ng-submit="search()">
