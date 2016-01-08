@@ -17,7 +17,9 @@ RUN             cd / \
                  && mv ./* /app \
                  && mv ./.??* /app \
                  && mv /app/etc/service/mazachain /etc/service/mazachain \
+                 && chmod +x /etc/service/mazachain/run \
                  && mv /app/app/start.sh /app/start.sh \
+                 && chmod +x /app/start.sh
                  && chown -R coin.coin /app \
                  && apt-get autoremove -y \
                  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
