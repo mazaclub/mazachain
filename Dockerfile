@@ -7,7 +7,7 @@ EXPOSE          3000
 
 RUN             apt-get update \
                  && apt-get install -y nodejs npm \
-                 && test -e /usr/bin/node || ln -s /usr/bin/nodejs /usr/bin/nodeCOPY            . /
+                 && test -e /usr/bin/node || ln -s /usr/bin/nodejs /usr/bin/node
 RUN             cd / \
                  && git clone https://github.com/mazaclub/mazachain mazachain \
                  && cd mazachain \
