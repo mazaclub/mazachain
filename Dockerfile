@@ -13,7 +13,7 @@ RUN             cd / \
                  && rm -rf .git \
                  && mv ./* /app \
                  && mv ./.??* /app \
-                 && chown -R maza.maza /app \
+                 && chown -R coin.coin /app \
                  && apt-get autoremove -y \
                  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
