@@ -1,4 +1,7 @@
 MAINTAINER      Rob Nelson <guruvan@maza.club>
+# IMAGE         maza/mazachain
+FROM            maza/maza-core-daemon
+# base: mazaclub/coind-base & phusion/baseimage
 
 EXPOSE          3000
 
