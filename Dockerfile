@@ -1,5 +1,5 @@
+FROM maza/maza-core-daemon
 MAINTAINER      Rob Nelson <guruvan@maza.club>
-FROM            maza/maza-core-daemon
 # IMAGE         maza/mazachain
 # base: mazaclub/coind-base & phusion/baseimage
 
