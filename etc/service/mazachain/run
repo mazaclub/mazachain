@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+# wait for mazacoind
+sleep 30
+cd /app
+
+test -z ${MAZACOIND} || echo "export MAZACOIND=${MAZACOIND}" > /mazachain.env
+test -z ${MAZADIR}   || echo "export MAZADIR=${MAZADIR}" >> /mazachain.env
+test -z ${RPCPORT}   || echo "export RPCPORT=${RPCPORT}" >> /mazachain.env
+test -z ${MAZACOIND} || echo "export NETWORK=${NETWORK}" > /mazachain.env
+chown -R coin.coin /home/coin
+
+exec su coin -c /app/start.sh

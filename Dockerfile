@@ -1,4 +1,7 @@
 MAINTAINER      Rob Nelson <guruvan@maza.club>
+# IMAGE         maza/mazachain
+FROM            maza/maza-core-daemon
+# base: mazaclub/coind-base & phusion/baseimage
 
 EXPOSE          3000
 
@@ -10,10 +13,11 @@ RUN             cd / \
                  && cd mazachain \
                  && git checkout mazachain \
                  && npm install \
-                 && rm -rf .git \
                  && mv ./* /app \
                  && mv ./.??* /app \
-                 && chown -R maza.maza /app \
+                 && mv /app/etc/service/mazachain /etc/service/mazachain \
+                 && mv /app/app/start.sh /app/start.sh \
+                 && chown -R coin.coin /app \
                  && apt-get autoremove -y \
                  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
