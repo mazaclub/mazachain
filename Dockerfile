@@ -13,6 +13,7 @@ RUN             cd / \
                  && cd mazachain \
                  && git checkout mazachain \
                  && npm install \
+                 && mkdir /app \
                  && mv ./* /app \
                  && mv ./.??* /app \
                  && mv /app/etc/service/mazachain /etc/service/mazachain \
