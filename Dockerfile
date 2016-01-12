@@ -11,7 +11,7 @@ RUN             apt-get update \
 RUN             cd / \
                  && git clone https://github.com/mazaclub/mazachain mazachain \
                  && cd mazachain \
-                 && git checkout mazachain \
+                 && git checkout mazachain-maza \
                  && npm install \
                  && mkdir /app \
                  && mv ./* /app \
